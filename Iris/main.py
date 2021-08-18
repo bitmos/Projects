@@ -7,8 +7,7 @@ with open('columns.json','r') as f:
     target=json.load(f)["data_columns"]
 with open("iris.pickle",'rb') as f:
     model=pickle.load(f)
-if __name__ == '__main__':
-    print('PyCharm')
+
 
 window = Tk()
 window.geometry("610x400")
