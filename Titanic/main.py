@@ -11,7 +11,9 @@ def predict(pclass,age,fare,gender):
     x[2]=fare
     if(gender=="Female"):
         x[3]=1
-    else:x[4]=1
+    else:
+        x[4]=1
+    print(x[0:])
     prd=model.predict([x])[0]
     if(prd==0):
         label4 = Label(window, text="Not Survived", relief="solid",
@@ -31,7 +33,7 @@ age = IntVar(window)
 fare = DoubleVar(window)
 gender = StringVar(window)
 
-label_h = Label(window, text="IRIS FLOWER PREDICTION", relief="solid", width=28, font=("arial", 19, "bold"))
+label_h = Label(window, text="Titanic Survival PREDICTION", relief="solid", width=28, font=("arial", 19, "bold"))
 label_h.place(x=90, y=60)
 
 
